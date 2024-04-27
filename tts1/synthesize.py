@@ -20,7 +20,7 @@ def get_args():
 
 
 # specify the path to vocoder's checkpoint
-vocoder_checkpoint = "exp/female3/vocoder/checkpoint-400000steps.pkl"
+vocoder_checkpoint = "tts1/exp/female3/vocoder/checkpoint-400000steps.pkl"
 vocoder = load_model(vocoder_checkpoint).to("cuda").eval()
 vocoder.remove_weight_norm()
 

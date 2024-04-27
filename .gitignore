@@ -1,2 +1,2 @@
-tts1/exp/vocoder/female3/*.pkl
-tts1/exp/tts_train_raw_char/female3/*.pth
+tts1/exp/**/*.pkl
+tts1/exp/**/*.pth

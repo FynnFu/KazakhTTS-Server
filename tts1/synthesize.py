@@ -20,13 +20,13 @@ def get_args():
 
 
 # specify the path to vocoder's checkpoint
-vocoder_checkpoint = "exp/vocoder/female3/checkpoint-400000steps.pkl"
+vocoder_checkpoint = "exp/female3/vocoder/checkpoint-400000steps.pkl"
 vocoder = load_model(vocoder_checkpoint).to("cuda").eval()
 vocoder.remove_weight_norm()
 
 # specify path to the main model(transformer/tacotron2/fastspeech) and its config file
-config_file = "exp/tts_train_raw_char/female3/config.yaml"
-model_path = "exp/tts_train_raw_char/female3/train.loss.ave_5best.pth"
+config_file = "exp/female3/tts_train_raw_char/config.yaml"
+model_path = "exp/female3/tts_train_raw_char/train.loss.ave_5best.pth"
 
 text2speech = Text2Speech(
     config_file,

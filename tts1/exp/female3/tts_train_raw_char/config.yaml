@@ -202,7 +202,7 @@ feats_extract_conf:
     n_mels: 80
 normalize: global_mvn
 normalize_conf:
-    stats_file: exp/tts_stats_raw_char/train/feats_stats.npz
+    stats_file: exp/female3/tts_stats_raw_char/train/feats_stats.npz
 tts: tacotron2
 tts_conf:
     embed_dim: 512

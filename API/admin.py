@@ -84,14 +84,14 @@ class LessonAdmin(admin.ModelAdmin):
         # Сначала сохраняем объект, чтобы был доступен его ID для использования в именах файлов
         super().save_model(request, obj, form, change)
 
-        if '_continue' in request.POST:
-            # Генерируем аудио
-            generate(obj, obj.word_audio, obj.word, 'lessons/audio/word/')
-
-            generate(obj, obj.list_of_word_audio, obj.list_of_word, 'lessons/audio/list_of_word/')
-
-            # Отправляем сообщение пользователю
-            self.message_user(request, 'Аудио успешно сгенерировано и сохранено.')
+        # if '_continue' in request.POST:
+        #     # Генерируем аудио
+        #     generate(obj, obj.word_audio, obj.word, 'lessons/audio/word/')
+        #
+        #     generate(obj, obj.list_of_word_audio, obj.list_of_word, 'lessons/audio/list_of_word/')
+        #
+        #     # Отправляем сообщение пользователю
+        #     self.message_user(request, 'Аудио успешно сгенерировано и сохранено.')
 
 
 @admin.register(Category)
